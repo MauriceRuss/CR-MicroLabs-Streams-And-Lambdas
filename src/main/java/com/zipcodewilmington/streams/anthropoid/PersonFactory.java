@@ -53,7 +53,11 @@ public final class PersonFactory {
      * @return - Array of Person objects
      */ // TODO
     public Person[] createPersonArray(int arrayLength) {
-        return null;
+
+        return Stream
+                .generate(this::createRandomPerson)
+                .limit(arrayLength)
+                .toArray(Person[]::new);
     }
 
 
