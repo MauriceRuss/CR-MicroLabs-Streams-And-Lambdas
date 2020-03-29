@@ -64,7 +64,7 @@ public final class PersonWarehouse implements Iterable<Person> {
      */ //TODO
     public Stream<Person> getFirstNUniquelyNamedPeople(int n) {
 
-        return null;
+        return getUniquelyNamedPeople().limit(n);
     }
 
     /**
